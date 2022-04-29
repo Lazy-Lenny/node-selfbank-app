@@ -1,5 +1,5 @@
 # node-selfbank-app
-Simple banking system website
+Simple banking system website that uses sql database (InnoDB engine)
 
 # Pages
 
