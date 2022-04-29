@@ -37,10 +37,10 @@ Default contentType is application/json
 /banks - returns ALL banks\
 /banks/id/:bankId - return bank by its ID\
 /banks/name/:bankName - returns bank by its NAME\
-/banks/userid/:userId - returns ALL banks which belongs to user with USER ID\
+/banks/userid/:userId - returns ALL banks which belongs to user with USER ID
 
 ### Users
 
 /users - retruns ALL users with ALL belonging banks\
 /users/id/:userId - returns user with ALL belonging banks by USER ID\
-/users/name/:userName - returns user with ALL belonging banks by USER NAME\
+/users/name/:userName - returns user with ALL belonging banks by USER NAME
