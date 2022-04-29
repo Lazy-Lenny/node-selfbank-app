@@ -44,3 +44,7 @@ Default contentType is application/json
 /users - retruns ALL users with ALL belonging banks\
 /users/id/:userId - returns user with ALL belonging banks by USER ID\
 /users/name/:userName - returns user with ALL belonging banks by USER NAME
+
+# Hosting
+This website uses Heroku free hosting with ClearDB addon
+https://node-selfbank.herokuapp.com/
