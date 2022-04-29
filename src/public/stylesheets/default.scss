@@ -1,0 +1,41 @@
+@import "fonts";
+@import "forms";
+
+.preload *{
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  //height: 100%;
+  + .wrapper{
+    all: inherit;
+  }
+}
+
+.container{
+  max-width: 1200px;
+  height: max-content;
+  width: 100%;
+    @media screen and (max-width: 1200px) {
+      max-width: 960px;
+    }
+    @media screen and (max-width: 960px) {
+      max-width: 640px;
+    }
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="../stylesheets/dashboard.css">
+    <link rel="icon" type="image/x-icon" href="../images/favico.ico">
+    <title>SelfBank - Dashboard</title>
+</head>
+<body>
+<%- include('partial/form_addbank') %>
+<div class="wrapper">
+    <header>
+        <div class="header__logo"><img src="../images/dashboard/logo_white.png" alt="#"></div>
+        <nav class="header__navigation">
+            <a href="#banks" class="navigation__tab">
+                <span class="tab__title">My banks</span>
+                <span class="tab__icon">
+                        <img src="../images/dashboard/svg/wallet.svg" alt="#">
+                    </span>
+            </a>
+            <a href="#calculator" class="navigation__tab">
+                <span class="tab__title">Calculator</span>
+                <span class="tab__icon">
+                        <img src="../images/dashboard/svg/calculator.svg" alt="#">
+                    </span>
+            </a>
+            <a href="/login" class="navigation__tab logout">
+                <span class="tab__title">Log out</span>
+                <span class="tab__icon">
+                        <img src="../images/dashboard/svg/log_out.svg" alt="#">
+                    </span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="banks">
+            <span class="banks__subtitle">Controls</span>
+            <div class="banks__controls">
+                <div class="controls__collapse">
+                    <div class="controls__search">
+                        <input type="text" name="bankName" placeholder="Search..."
+                               class="search__input input_val-string-accept-whitespace">
+                    </div>
+                    <div class="controls__sort">
+                        <div class="sort__pre">Sort by:</div>
+                        <div class="sort__category" data-sort-type="bankInterest">Rate</div>
+                        <div class="sort__category" data-sort-type="bankMDP">DP</div>
+                        <div class="sort__category" data-sort-type="bankMaxLoan">Max loan</div>
+                        <div class="sort__category" data-sort-type="bankLoanTerm">Term</div>
+                        <div class="sort__order">
+                            <img src="../images/dashboard/svg/arrow.svg" alt="#">&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="controls__add">
+                    <form class="sendfile"><input type="file" accept=".bsaf" name="file"></form>
+                    <button class="controls__button button_type--add"><span class="button__text">Add bank</span>
+                        <div class="button__icon"><img
+                                    src="../images/dashboard/svg/add.svg"
+                                    alt="#"></div>
+                    </button>
+                    <button class="controls__button button_type--upload"><span class="button__text">Upload</span>
+                        <div class="button__icon"><img src="../images/dashboard/svg/upload.svg" alt="#"></div>
+                    </button>
+                    <div class="loading"><img src="../images/dashboard/loading.gif" alt="#"></div>
+                </div>
+            </div>
+            <span class="banks__subtitle">My banks</span>
+            <div class="banks__list">
+            </div>
+        </section>
+        <section class="calculator">
+            <%- include('partial/form_calculator') %>
+        </section>
+    </main>
+    <div class="error__wrapper">
+        <div class="error">
+            Err
+        </div>
+    </div>
+    >
+</div>
+</body>
+<script src="../javascripts/validation.js"></script>
+<script src="../javascripts/dashboard.js"></script>
+</html>

@@ -1,0 +1,37 @@
+<form class="form <%= isReg ? 'form__registration' : 'form__login' %>" action="<%= url %>">
+    <div class="form__logo"><img src="../images/forms/logo.png" alt="#"></div>
+    <div class="form__input">
+        <span class="input__title">Name:</span>
+        <input autocomplete="off" class="input__input input_val-string input_type--name required" type="text" name="userName"
+               maxlength="100" pattern="[a-zA-Zа-яА-ЯйЙёЁґҐїЇъЪіІыЫєЄэЭ0-9_]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Password:</span>
+        <input autocomplete="off" class="input__input input_val-string input_val-special input_type--password required" minlength="10"
+               maxlength="255" type="password" name="userPassword"
+               pattern="[a-zA-Zа-яА-ЯйЙёЁґҐїЇъЪіІыЫєЄэЭ0-9_@#!~\/\*-\+&<>\?=%\.,]+">
+        <span class="input__control control_type--showpass">
+            <img src="../images/forms/svg/Eye_slash.svg" alt="#">
+            <img src="../images/forms/svg/Eye.svg" class="hide" alt="#">
+        </span>
+    </div>
+    <% if (isReg) { %>
+        <%- `<div class="form__input">
+          <span class="input__title">Repeat password:</span>
+          <input autocomplete="off" class="input__input input_type--password_check required" maxlength="255" type="password">
+          <span class="input__control control_type--showpass">
+            <img src="../images/forms/svg/Eye_slash.svg" class="show" alt="#">
+            <img src="../images/forms/svg/Eye.svg" class="hide" alt="#">
+          </span>
+          </div>` %>
+    <% } %>
+    <div class="form__controls">
+        <button class="form__button" type="submit"><%= isReg ? "Sign up" : "Log in" %></button>
+        <div class="loading"><img src="../images/forms/loading.gif" alt="#"></div>
+    </div>
+<!--    Насправді можна переробити як pop-up повідомлення.. TODO??-->
+    <div class="form__error error">err</div>
+<!--    -->
+    <a href="<%= isReg ? "/login" : "/registration" %>"
+       class="form__link"><%= isReg ? "Already have an account?" : "Sign up!" %></a>
+</form>

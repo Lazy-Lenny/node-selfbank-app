@@ -1,0 +1,185 @@
+/* Montserrat font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+form {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+  font-family: "Montserrat", sans-serif; }
+  @media screen and (max-width: 1200px) {
+    form {
+      max-width: 420px; } }
+  form .form__logo {
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; }
+    form .form__logo > img {
+      width: 100%;
+      height: auto; }
+    @media screen and (max-width: 960px) {
+      form .form__logo {
+        width: 200px; } }
+    @media screen and (max-width: 480px) {
+      form .form__logo {
+        width: 100%;
+        padding: 5vw; } }
+  form .form__input {
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%; }
+    form .form__input .input__title {
+      font-size: 18px;
+      font-weight: 300; }
+      @media screen and (max-width: 640px) {
+        form .form__input .input__title {
+          font-size: 14px; } }
+    form .form__input .input__input {
+      outline: none;
+      height: 60px;
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #e5e5e5;
+      background-color: #fdfdfd;
+      padding: 10px 20px;
+      font-size: 20px;
+      color: #000; }
+      form .form__input .input__input[type="password"] {
+        padding-right: 45px; }
+      form .form__input .input__input ::placeholder {
+        color: #b6b6b6; }
+      form .form__input .input__input :-webkit-autofill {
+        display: none; }
+      @media screen and (max-width: 640px) {
+        form .form__input .input__input {
+          height: 50px;
+          font-size: 16px; } }
+      form .form__input .input__input.required.required__unset {
+        border: 2px solid #ED2939; }
+    form .form__input .input__control {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      bottom: 17.5px;
+      right: 15px;
+      cursor: pointer; }
+      @media screen and (max-width: 640px) {
+        form .form__input .input__control {
+          bottom: 15px;
+          width: 20px;
+          height: 20px; } }
+      form .form__input .input__control > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transition: .2s;
+        transition-property: opacity; }
+        form .form__input .input__control > img.hide {
+          opacity: 0; }
+  form .form__button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: #3cb043;
+    border: 2px solid #3cb043;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: .2s;
+    transition-property: color, background-color; }
+    form .form__button:hover {
+      color: #fff;
+      background-color: #3cb043; }
+    @media screen and (max-width: 640px) {
+      form .form__button {
+        font-size: 16px;
+        margin-top: 10px; } }
+  form .form__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative; }
+    form .form__controls .loading {
+      position: absolute;
+      display: none;
+      width: 25px;
+      height: 25px;
+      top: calc(50% - 2px);
+      right: -35px; }
+      form .form__controls .loading > img {
+        width: 100%;
+        height: auto; }
+      form .form__controls .loading.is_loading {
+        display: block; }
+  form .form__link {
+    margin-top: 20px;
+    color: dodgerblue; }
+    form .form__link:visited {
+      color: dodgerblue; }
+    @media screen and (max-width: 640px) {
+      form .form__link {
+        font-size: 14px; } }
+  form .form__error {
+    margin-top: 20px;
+    opacity: 0;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-weight: 400;
+    background-color: #ED2939;
+    transition: .2s;
+    transition-property: opacity; }
+    @media screen and (max-width: 640px) {
+      form .form__error {
+        font-size: 14px; } }
+    form .form__error.active {
+      opacity: 1; }
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; }
+  body + .wrapper {
+    all: inherit; }
+
+.container {
+  max-width: 1200px;
+  height: max-content;
+  width: 100%; }
+  @media screen and (max-width: 1200px) {
+    .container {
+      max-width: 960px; } }
+  @media screen and (max-width: 960px) {
+    .container {
+      max-width: 640px; } }
+
+/*# sourceMappingURL=default.css.map */

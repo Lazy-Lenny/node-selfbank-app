@@ -1,0 +1,23 @@
+<form class="form calculator">
+    <div class="form__input">
+        <span class="input__title">Loan:</span>
+        <input autocomplete="off" class="input__input input_val-numeric-zero-prevent required" type="text" name="userLoan"
+               maxlength="9" pattern="^[^0][0-9]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Down payment:</span>
+        <input autocomplete="off" class="input__input input_val-numeric-zero-prevent required" type="text" name="userDP"
+               maxlength="9" pattern="^[^0][0-9]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Bank:</span>
+        <select class="input__input required" name="bank">
+            <option selected>Select bank...</option>
+        </select>
+    </div>
+    <button class="form__button">Calculate</button>
+    <!--    Насправді можна переробити як pop-up повідомлення.. TODO??-->
+    <div class="form__result"></div>
+    <div class="form__error error">err</div>
+    <!--    -->
+</form>

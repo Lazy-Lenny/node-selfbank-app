@@ -1,0 +1,10 @@
+@import "default.css";
+.registration__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*# sourceMappingURL=registration.css.map */

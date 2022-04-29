@@ -1,0 +1,33 @@
+<form class="form addbank">
+    <div class="close"><img src="../images/dashboard/svg/delete.svg" alt="#"></div>
+    <div class="form__input">
+        <span class="input__title">Name:</span>
+        <input autocomplete="off" class="input__input input_val-string-accept-whitespace required" type="text" name="bankName"
+               maxlength="150" pattern="[a-zA-Zа-яА-ЯйЙёЁґҐїЇъЪіІыЫєЄэЭ0-9_\s]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Interest rate (%):</span>
+        <input autocomplete="off" class="input__input input_val-numeric-zero-prevent required" type="text" name="bankInterest"
+               maxlength="9" pattern="^[^0]*[0-9]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Down payment (%):</span>
+        <input autocomplete="off" class="input__input input_val-numeric-zero-prevent required" type="text" name="bankMDP"
+               maxlength="9" pattern="^[^0]*[0-9]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Max loan:</span>
+        <input autocomplete="off" class="input__input input_val-numeric-zero-prevent required" type="text" name="bankMaxLoan"
+               maxlength="9" pattern="^[^0]*[0-9]+">
+    </div>
+    <div class="form__input">
+        <span class="input__title">Loan term (month):</span>
+        <input autocomplete="off" class="input__input input_val-numeric-zero-prevent required" type="text" name="bankLoanTerm"
+               maxlength="9" pattern="^[^0]*[0-9]+">
+    </div>
+    <div class="form__controls">
+        <button class="form__button" type="submit">Add bank</button>
+        <div class="loading"><img src="../images/forms/loading.gif" alt="#"></div>
+    </div>
+    <div class="form__error error">err</div>
+</form>

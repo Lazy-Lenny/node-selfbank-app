@@ -1,0 +1,137 @@
+.bank {
+  --row: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  min-height: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+  margin: 10px 10px 0 0;
+  transition: 0.2s;
+  transition-property: box-shadow, transform;
+  width: calc(1 / var(--row) * 100% - (1 - 1 / var(--row)) * 10px);
+}
+.bank.collapsed {
+  box-shadow: none;
+  transform: scale(0.98);
+}
+.bank:nth-child(3n) {
+  margin-right: 0;
+}
+.bank:nth-child(-n+3) {
+  margin-top: 0;
+}
+@media screen and (max-width: 960px) {
+  .bank {
+    --row: 2;
+  }
+  .bank:nth-child(3n) {
+    margin: 10px 10px 0 0;
+  }
+  .bank:nth-child(-n+3) {
+    margin: 10px 10px 0 0;
+  }
+  .bank:nth-child(2n) {
+    margin-right: 0;
+  }
+  .bank:nth-child(-n+2) {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .bank {
+    --row: 1;
+  }
+  .bank:nth-child(2n) {
+    margin: 10px 10px 0 0;
+  }
+  .bank:nth-child(-n+2) {
+    margin: 10px 10px 0 0;
+  }
+  .bank:nth-child(1n) {
+    margin-right: 0;
+  }
+  .bank:nth-child(-n+1) {
+    margin-top: 0;
+  }
+}
+.bank .bank__controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+.bank .bank__controls .loading.hide {
+  opacity: 0;
+}
+.bank .bank__controls > * {
+  width: 25px;
+  height: 25px;
+  margin: 0 2.5px;
+  cursor: pointer;
+  transition: 0.2s;
+  transition-property: transform;
+}
+.bank .bank__controls > *:hover {
+  transform: scale(0.9);
+}
+.bank .bank__controls > * > img {
+  width: 100%;
+  height: auto;
+}
+.bank .bank__controls .controls__redact {
+  position: relative;
+}
+.bank .bank__controls .controls__redact > img {
+  position: absolute;
+}
+.bank .bank__controls .controls__redact > img.hide {
+  opacity: 0;
+}
+.bank .bank__info-field {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .bank .bank__info-field .info-field__title {
+    font-size: 14px;
+  }
+}
+.bank .bank__info-field .bank__input {
+  font-size: 24px;
+  width: 100%;
+  padding: 3px;
+  outline: none;
+}
+.bank .bank__info-field .bank__input:first-child {
+  font-size: 30px;
+}
+.bank .bank__info-field .bank__input:disabled {
+  background: transparent;
+  outline: none;
+  border: 2px solid transparent;
+  text-overflow: ellipsis;
+}
+.bank .bank__info-field .bank__input.required__unset {
+  border: 2px solid #ED2939 !important;
+}
+@media screen and (max-width: 1200px) {
+  .bank .bank__info-field .bank__input {
+    font-size: 22px;
+  }
+  .bank .bank__info-field .bank__input:first-child {
+    font-size: 28px;
+  }
+}
+
+/*# sourceMappingURL=banks.css.map */

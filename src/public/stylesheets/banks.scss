@@ -1,0 +1,147 @@
+.bank {
+  --row: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  min-height: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .06);
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+  margin: 10px 10px 0 0;
+  transition: .2s;
+  transition-property: box-shadow, transform;
+  width: calc(1 / var(--row) * 100% - (1 - 1 / var(--row)) * 10px);
+
+  &.collapsed{
+    box-shadow: none;
+    transform: scale(.98);
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(-n+3) {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 960px) {
+    --row: 2;
+
+    &:nth-child(3n) {
+      margin: 10px 10px 0 0;
+    }
+
+    &:nth-child(-n+3) {
+      margin: 10px 10px 0 0;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(-n+2) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    --row: 1;
+
+    &:nth-child(2n) {
+      margin: 10px 10px 0 0;
+    }
+
+    &:nth-child(-n+2) {
+      margin: 10px 10px 0 0;
+    }
+
+    &:nth-child(1n) {
+      margin-right: 0;
+    }
+    &:nth-child(-n+1) {
+      margin-top: 0;
+    }
+  }
+
+  .bank__controls {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    .loading{
+      &.hide{
+        opacity: 0;
+      }
+    }
+    > *{
+      width: 25px;
+      height: 25px;
+      margin: 0 2.5px;
+      cursor: pointer;
+      transition: .2s;
+      transition-property: transform;
+      &:hover{
+        transform: scale(.9);
+      }
+      > img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .controls__redact{
+      position: relative;
+      > img{
+        position: absolute;
+        &.hide{
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .bank__info-field {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    .info-field__title{
+      @media screen and (max-width: 1200px) {
+        font-size: 14px;
+      }
+    }
+    .bank__input {
+      &:first-child {
+        font-size: 30px;
+      }
+
+      font-size: 24px;
+      width: 100%;
+      padding: 3px;
+      outline: none;
+      &:disabled {
+        background: transparent;
+        //border: none;
+        outline: none;
+        border: 2px solid transparent;
+        text-overflow: ellipsis;
+      }
+
+      &.required__unset{
+        border: 2px solid #ED2939 !important;
+      }
+      @media screen and (max-width: 1200px) {
+        &:first-child {
+          font-size: 28px;
+        }
+        font-size: 22px;
+      }
+    }
+  }
+
+}
